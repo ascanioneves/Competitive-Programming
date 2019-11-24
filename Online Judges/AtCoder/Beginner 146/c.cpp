@@ -9,26 +9,26 @@ lli digits(int n)
 }
 lli upper(lli n, lli a, lli b) 
 {
-	lli mid, start = 0, end = 1e9, ans = -1, ans2;
-	while(start <= end) 
+  lli mid, start = 0, end = 1e9, ans = -1, ans2;
+  while(start <= end) 
   {
-		mid = (start + end)/2;
+    mid = (start + end)/2;
     lli calc = (a * mid) + (b * digits(mid)); 
-		if(calc == n) 
+    if(calc == n) 
     {
-			ans = mid;
-			start = mid + 1;
+      ans = mid;
+      start = mid + 1;
       return ans;
-		}
-		else if(calc < n) 
+    }
+    else if(calc < n) 
     {
-			start = mid + 1;
-			ans2 = mid;
-		}
-		else 
-			end = mid - 1;
-	}
-	return (ans == -1) ? ans2 : ans;
+      start = mid + 1;
+      ans2 = mid;
+    }
+    else 
+      end = mid - 1;
+  }
+  return (ans == -1) ? ans2 : ans;
 }
 int main()
 {
