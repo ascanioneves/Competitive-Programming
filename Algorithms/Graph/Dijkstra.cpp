@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-//This algorithm is more general than BFS with unity weith, because in the real life , for example,
+//This algorithm is more general than BFS with unity weigth, because in the real life , for example,
 //the distances between cities are not equals. 
 typedef pair<int,int> pii;
 
