@@ -1,6 +1,8 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//This algorithm works when the edges don't have weight or have a unity weight
+
 int dx[8] = {-1,-1,-1,0,1,1,1,0};// vetor de movimento
 int dy[8] = {-1,0,1,1,1,0,-1,-1};//
 
