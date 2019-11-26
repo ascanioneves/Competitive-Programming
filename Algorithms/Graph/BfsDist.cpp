@@ -6,13 +6,13 @@ using namespace std;
 int dx[8] = {-1,-1,-1,0,1,1,1,0};// vetor de movimento
 int dy[8] = {-1,0,1,1,1,0,-1,-1};//
 
-const int maxN = 10;
+const int maxN = 1e5;
 vector<int> adj[maxN];
 vector<int> dist;
 
 void bfs(int u)
 {
-  for(int i = 0 ; i < n; i++)
+  for(int i = 0 ; i < maxN; i++)
     dist[i] = -1;
   queue<int> q;
   q.push(u);
