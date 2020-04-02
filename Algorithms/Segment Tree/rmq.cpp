@@ -13,18 +13,18 @@ void build(int i, int L, int R) {
   if (L == R) 
     st[i] = L;
   else {
-    build(left(i), L, (L+R)/2); //controi p/ direita
-    build(right(i), ((L+R)/2)+1, R); //constroi p/ esquerda
+    build(left(i), L, (L+R)/2); //left build
+    build(right(i), ((L+R)/2)+1, R); //right build
     int l = st[left(i)], r = st[right(i)];
     st[i] = (A[l] <= A[r]) ? l : r;
   }
 }
 int RMQ(int p, int L, int R, int i, int j) {
-  if (i > R || j < L) //estou fora do intervalo
+  if (i > R || j < L) //outside query range
     return -1;
-  if (i <= L && j >= R) //estou dentro do intervalo
+  if (i <= L && j >= R) //inside query range
     return st[p];
-  //estou parcialmente no intervalo
+  //otherwise:
   int l = RMQ(left(p), L, (L+R)/2, i, j), r = RMQ(right(p), ((L + R)/2)+1, R, i, j);
 
   if (l == -1)
