@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+//If the array is static (i.e unchanged after it is instantiated), then using a Segment Tree to solve the RMQ problem is overkill as there
+//exists a Dynamic Programming (DP) solution that requires O(n.logn) one-time pre-processing and allows O(1) per Query.
+
 int A[7] = {18, 17, 13, 19, 15, 11, 20};
 vector<int> st;
 int left(int p) { return p << 1; }
