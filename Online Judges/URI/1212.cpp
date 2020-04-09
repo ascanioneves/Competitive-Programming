@@ -25,6 +25,5 @@ int main()
 		else
 			printf("%lld carry operations.\n", carrys);
 	}	
-	
 	return 0;
 }
